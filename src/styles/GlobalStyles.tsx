@@ -1,7 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 
-import bg from '../assets/bg.png';
-
 const GlobalStyles = createGlobalStyle`
 	*,
 	*::before,
@@ -12,13 +10,12 @@ const GlobalStyles = createGlobalStyle`
 	}
 
 	body {
+		width: 100%;
+		min-height: 100vh;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     color: #FFFFFD;
-		flex-shrink: 0;
-    background: url(${bg}) lightgray 0px -0.827px / 179.034% 100.035% no-repeat;
-    mix-blend-mode: color-burn;
 }
 
 	a {
