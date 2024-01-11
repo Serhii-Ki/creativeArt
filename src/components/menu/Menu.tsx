@@ -7,15 +7,18 @@ type MenuType = {
 function Menu(props: MenuType) {
 	return (
 		<StyledMenu>
-			{props.listItems.map(item => (
-				<li>
-					<a href='#/'>listItems.title</a>
+			{props.listItems.map((item, index) => (
+				<li key={index}>
+					<a href='#/'>{item}</a>
 				</li>
 			))}
 		</StyledMenu>
 	);
 }
 
-const StyledMenu = styled.ul``;
+const StyledMenu = styled.ul`
+	display: flex;
+	gap: 40px;
+`;
 
 export default Menu;
