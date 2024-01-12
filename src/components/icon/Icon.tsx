@@ -1,18 +1,24 @@
-import React from 'react';
-import { styled } from 'styled-components';
+import iconsSprite from '../../assets/sprite_icons.svg';
 
 type IconPropsType = {
-	icon: React.ReactNode;
+	iconId: string;
+	width?: string;
+	height?: string;
+	viewBox?: string;
 };
 
 function Icon(props: IconPropsType) {
 	return (
-		<StyledIcon>
-			<a href='#/'>{props.icon}</a>
-		</StyledIcon>
+		<svg
+			width={props.width || '120'}
+			height={props.height || '120'}
+			viewBox={props.viewBox || '0 0 120 120'}
+			fill='none'
+			xmlns='http://www.w3.org/2000/svg'
+		>
+			<use xlinkHref={`${iconsSprite}#${props.iconId}`} />
+		</svg>
 	);
 }
-
-const StyledIcon = styled.div``;
 
 export default Icon;

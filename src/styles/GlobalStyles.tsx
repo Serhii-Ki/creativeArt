@@ -10,6 +10,9 @@ const GlobalStyles = createGlobalStyle`
 	}
 
 	body {
+		font-family: 'Inter', sans-serif;
+		font-weight: 400;
+		font-size: 16px;
 		width: 100%;
 		min-height: 100vh;
     font-size: 16px;
@@ -19,6 +22,9 @@ const GlobalStyles = createGlobalStyle`
 }
 
 	a {
+		font-family: 'Inter', sans-serif;
+		font-weight: 400;
+		font-size: 16px;
 		font-size: 20px;
 		font-weight: 500;
 		text-decoration: none;

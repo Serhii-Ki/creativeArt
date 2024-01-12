@@ -15,9 +15,10 @@ function Button(props: ButtonType) {
 }
 
 const StyledBtn = styled.button<ButtonStyleType>`
+	font-family: 'Inter', sans-serif;
 	padding: 12px 40px;
 	font-size: 16px;
-	font-weight: 700;
+	font-weight: 500;
 	border-radius: 8px;
 	cursor: pointer;
 	color: ${props => props.color || '#090f1d'};

@@ -7,6 +7,7 @@ export const Background = styled.div`
 	height: 100vh;
 	/* background: url(${bg}) center center/cover no-repeat;
 	filter: brightness(20%); */
-	background: url(${bg}), lightgray 0px -0.827px / 179.034% 100.035% no-repeat;
-	mix-blend-mode: color-burn;
+	/* background: url(${bg}), lightgray 0px -0.827px / 179.034% 100.035% no-repeat;
+	mix-blend-mode: color-burn; */
+	background-color: #151414;
 `;
