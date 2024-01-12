@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Background } from './components/background/Background';
 import Header from './layout/header/Header';
+import Main from './layout/main/Main';
 import GlobalStyles from './styles/GlobalStyles';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
 			<GlobalStyles />
 			<StyledContainer>
 				<Header />
+				<Main />
 			</StyledContainer>
 		</Background>
 	);
