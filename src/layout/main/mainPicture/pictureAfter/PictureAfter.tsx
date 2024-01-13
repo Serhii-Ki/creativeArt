@@ -20,7 +20,12 @@ function PictureAfter() {
 					<StyledDate>0.24ETH</StyledDate>
 				</FlexContainer>
 			</FlexContainer>
-			<Button title='Place A Bid' />
+			<Button
+				title='Place A Bid'
+				bgColor='transparent'
+				color='#D3F85A'
+				border='1px solid #D3F85A'
+			/>
 		</StyledBlock>
 	);
 }

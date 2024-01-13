@@ -11,7 +11,7 @@ type ButtonType = {
 } & ButtonStyleType;
 
 function Button(props: ButtonType) {
-	return <StyledBtn>{props.title}</StyledBtn>;
+	return <StyledBtn {...props}>{props.title}</StyledBtn>;
 }
 
 const StyledBtn = styled.button<ButtonStyleType>`

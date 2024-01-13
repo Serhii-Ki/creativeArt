@@ -18,7 +18,7 @@ function MainInfo() {
 			</StyledText>
 			<FlexContainer justify='start' style={{ marginBottom: '70px' }}>
 				<Button title='Explore Now' />
-				<Button title='Learn More' bgColor='red' />
+				<Button title='Learn More' bgColor='transparent' color='#D3F85A' />
 			</FlexContainer>
 			<InfoBlock />
 		</StyledMainInfo>
