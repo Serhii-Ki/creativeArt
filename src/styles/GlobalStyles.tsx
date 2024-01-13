@@ -10,15 +10,16 @@ const GlobalStyles = createGlobalStyle`
 	}
 
 	body {
-		width: 100%;
-		min-height: 100vh;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
+		font-family: 'Inter', sans-serif;
+		font-weight: 400;
+		font-size: 16px;
     color: #FFFFFD;
 }
 
 	a {
+		font-family: 'Inter', sans-serif;
+		font-weight: 400;
+		font-size: 16px;
 		font-size: 20px;
 		font-weight: 500;
 		text-decoration: none;

@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
-import logo from '../../assets/logo.svg';
 import Button from '../../components/button/Button';
 import { FlexContainer } from '../../components/flexContainer/FlexContainer';
-import Icon from '../../components/icon/Icon';
+import Logo from '../../components/logo/Logo';
 import Menu from '../../components/menu/Menu';
 
 const menuItems = ['Marketplace', 'Artists', 'Community', 'Collections'];
@@ -12,7 +11,7 @@ function Header() {
 	return (
 		<StyledHeader>
 			<FlexContainer>
-				<Icon icon={logo} />
+				<Logo />
 				<Menu listItems={menuItems} />
 				<Button title='Contact' />
 			</FlexContainer>
