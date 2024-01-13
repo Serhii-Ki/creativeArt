@@ -16,9 +16,9 @@ function MainInfo() {
 				digital ART and NFT’s. Start exploring the world of digital art and NFTs
 				today and take control of your digital assets with confidence!
 			</StyledText>
-			<FlexContainer style={{ marginBottom: '70px' }}>
+			<FlexContainer justify='start' style={{ marginBottom: '70px' }}>
 				<Button title='Explore Now' />
-				<Button title='Learn More' bgColor='none' />
+				<Button title='Learn More' bgColor='red' />
 			</FlexContainer>
 			<InfoBlock />
 		</StyledMainInfo>

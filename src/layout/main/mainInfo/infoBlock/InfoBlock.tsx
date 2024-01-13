@@ -4,18 +4,44 @@ import { GreenText } from '../../../../components/greenText/GreenText';
 
 function InfoBlock() {
 	return (
-		<FlexContainer>
+		<FlexContainer justify='start' gapColum='120px'>
 			<StyledBlock>
 				<StyledCount>
 					<GreenText>8.9</GreenText>K
 				</StyledCount>
 				<StyledName>Art work</StyledName>
 			</StyledBlock>
+			<StyledBlock>
+				<StyledCount>
+					<GreenText>65</GreenText>K
+				</StyledCount>
+				<StyledName>Artist</StyledName>
+			</StyledBlock>
+			<StyledBlock>
+				<StyledCount>
+					<GreenText>87</GreenText>K
+				</StyledCount>
+				<StyledName>Collection</StyledName>
+			</StyledBlock>
 		</FlexContainer>
 	);
 }
 
-const StyledBlock = styled.div``;
+const StyledBlock = styled.div`
+	position: relative;
+
+	&:not(:last-child) {
+		::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: -28px;
+			width: 1px;
+			height: 100%;
+			background-color: #d3f85a;
+		}
+	}
+`;
 
 const StyledCount = styled.p`
 	font-size: 48px;
@@ -23,7 +49,7 @@ const StyledCount = styled.p`
 `;
 
 const StyledName = styled.p`
-	margin-top: 10px;
+	margin-top: 7px;
 `;
 
 export default InfoBlock;
