@@ -20,7 +20,7 @@ function App() {
 
 const StyledContainer = styled.div`
 	text-align: start;
-	max-width: 1240px;
+	max-width: 1300px;
 	margin: 0 auto;
 	padding: 0 5px;
 `;
