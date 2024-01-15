@@ -33,7 +33,7 @@ function UniqueArt() {
 				</StyledTitle>
 				<Button title='See All' />
 			</FlexContainer>
-			<FlexContainer gapColum='20px' gapRow='26px' wrap='wrap'>
+			<FlexContainer gapColum='20px' gapRow='26px' wrap='wrap' justify='center'>
 				{cards.map(item => (
 					<Card title={item.title} img={item.img} />
 				))}
