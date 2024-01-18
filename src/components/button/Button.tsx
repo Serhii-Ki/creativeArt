@@ -4,6 +4,9 @@ type ButtonStyleType = {
 	color?: string;
 	bgColor?: string;
 	border?: string;
+	position?: string;
+	top?: string;
+	right?: string;
 };
 
 type ButtonType = {
@@ -24,6 +27,9 @@ const StyledBtn = styled.button<ButtonStyleType>`
 	color: ${props => props.color || '#090f1d'};
 	background-color: ${props => props.bgColor || '#D3F85A'};
 	border: ${props => props.border || 'none'};
+	position: ${props => props.position || 'static'};
+	top: ${props => props.top || 'auto'};
+	right: ${props => props.right || 'auto'};
 `;
 
 export default Button;

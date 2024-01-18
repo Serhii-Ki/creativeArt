@@ -4,6 +4,7 @@ import Header from './layout/header/Header';
 import Main from './layout/main/Main';
 import CreateNft from './layout/section/createNft/CreateNft';
 import PopularArtist from './layout/section/popularArtists/PopularArtist';
+import Subscribe from './layout/section/subscribe/Subscribe';
 import UniqueArt from './layout/section/uniqueArt/UniqueArt';
 import GlobalStyles from './styles/GlobalStyles';
 
@@ -17,6 +18,7 @@ function App() {
 				<UniqueArt />
 				<CreateNft />
 				<PopularArtist />
+				<Subscribe />
 			</StyledContainer>
 		</Background>
 	);
