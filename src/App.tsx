@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Background } from './components/background/Background';
+import Footer from './layout/footer/Footer';
 import Header from './layout/header/Header';
 import Main from './layout/main/Main';
 import CreateNft from './layout/section/createNft/CreateNft';
@@ -19,6 +20,7 @@ function App() {
 				<CreateNft />
 				<PopularArtist />
 				<Subscribe />
+				<Footer />
 			</StyledContainer>
 		</Background>
 	);
@@ -29,7 +31,7 @@ const StyledContainer = styled.div`
 	max-width: 1300px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 5px;
+	padding: 0 15px;
 `;
 
 export default App;
