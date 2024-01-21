@@ -19,6 +19,15 @@ function Menu(props: MenuType) {
 const StyledMenu = styled.ul`
 	display: flex;
 	gap: 40px;
+
+	@media screen and (max-width: 980px) {
+		flex-direction: column;
+		gap: 50px;
+
+		a {
+			font-size: 38px;
+		}
+	}
 `;
 
 export default Menu;
