@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import { FlexContainer } from '../../../../components/flexContainer/FlexContainer';
 import { GreenText } from '../../../../components/greenText/GreenText';
+import { font } from '../../../../styles/Common';
 
 function InfoBlock() {
 	return (
-		<FlexContainer justify='start' gapColum='120px'>
+		<FlexContainer justify='space-between'>
 			<StyledBlock>
 				<StyledCount>
 					<GreenText>8.9</GreenText>K
@@ -44,8 +45,8 @@ const StyledBlock = styled.div`
 `;
 
 const StyledCount = styled.p`
-	font-size: 48px;
-	font-weight: 500;
+	white-space: nowrap;
+	${font({ Fmax: 48, Fmin: 31, weight: 500 })}
 `;
 
 const StyledName = styled.p`

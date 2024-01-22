@@ -7,8 +7,6 @@ import PictureAfter from './pictureAfter/PictureAfter';
 function MainPicture() {
 	return (
 		<StyledPictureContainer>
-			<StyledImgBefore src={art} />
-			<StyledImg src={img} alt='Some hero' />
 			<PictureAfter />
 		</StyledPictureContainer>
 	);
@@ -16,23 +14,34 @@ function MainPicture() {
 
 const StyledPictureContainer = styled.div`
 	position: relative;
-	width: 575px;
-	height: 637px;
-`;
-
-const StyledImg = styled.img`
-	display: block;
 	width: 464px;
 	height: 544px;
-	border-radius: 24px;
-	margin: 0 auto;
-`;
+	border-radius: 28px;
+	margin-right: 20px;
+	background: url(${img}) center center/contain no-repeat;
 
-const StyledImgBefore = styled.img`
-	position: absolute;
-	top: 50%;
-	left: 0px;
-	transform: translateY(-50%);
+	::before {
+		content: '';
+		position: absolute;
+		bottom: 180px;
+		right: 315px;
+		width: 100%;
+		height: 100%;
+		background: url(${art}) center/contain no-repeat;
+	}
+
+	@media screen and (max-width: 768px) {
+		max-width: 294px;
+		max-height: 344px;
+		border-radius: 16px;
+
+		::before {
+			width: 60%;
+			height: 60%;
+			bottom: 150px;
+			right: 225px;
+		}
+	}
 `;
 
 export default MainPicture;

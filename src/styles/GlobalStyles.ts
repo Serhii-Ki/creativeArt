@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
 		font-weight: 400;
 		font-size: 16px;
     color: #FFFFFD;
+		min-width: 360px;
 }
 
 	a {
