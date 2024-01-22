@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import Button from '../../components/button/Button';
@@ -9,14 +10,26 @@ import MobileMenu from './mobileMenu/MobileMenu';
 export const menuItems = ['Marketplace', 'Artists', 'Community', 'Collections'];
 
 function Header() {
+	const [width, setWidth] = useState(window.innerWidth);
+	const breakpoint = 980;
+
+	useEffect(() => {
+		const handleWindowResize = () => setWidth(window.innerWidth);
+		window.addEventListener('resize', handleWindowResize);
+		return () => window.removeEventListener('resize', handleWindowResize);
+	}, []);
+
 	return (
 		<StyledHeader>
-			<DesktopMenu>
-				<Logo />
-				<Menu listItems={menuItems} />
-				<Button title='Contact' />
-			</DesktopMenu>
-			<MobileMenu />
+			{width > breakpoint ? (
+				<DesktopMenu>
+					<Logo />
+					<Menu listItems={menuItems} />
+					<Button title='Contact' />
+				</DesktopMenu>
+			) : (
+				<MobileMenu />
+			)}
 		</StyledHeader>
 	);
 }
