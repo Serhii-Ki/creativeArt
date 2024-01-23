@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Background } from './components/background/Background';
 import Footer from './layout/footer/Footer';
 import Header from './layout/header/Header';
 import Main from './layout/main/Main';
@@ -11,7 +10,7 @@ import GlobalStyles from './styles/GlobalStyles';
 
 function App() {
 	return (
-		<Background>
+		<>
 			<GlobalStyles />
 			<StyledContainer>
 				<Header />
@@ -22,7 +21,7 @@ function App() {
 				<Subscribe />
 				<Footer />
 			</StyledContainer>
-		</Background>
+		</>
 	);
 }
 

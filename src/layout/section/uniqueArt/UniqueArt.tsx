@@ -47,6 +47,11 @@ function UniqueArt() {
 	);
 }
 
+const GridTitle = styled.h2`
+	grid-area: 'title';
+	${font({ Fmax: 48, Fmin: 31, weight: 500 })}
+`;
+
 const GridContainer = styled.section`
 	display: grid;
 	grid-template-columns: 2fr 1fr;
@@ -56,35 +61,27 @@ const GridContainer = styled.section`
 	grid-template-areas:
 		'title btn'
 		'card card';
-`;
 
-const GridTitle = styled.h2`
-	grid-area: 'title';
-	${font({ Fmax: 48, Fmin: 31, weight: 500 })}
-`;
+	Button {
+		justify-self: end;
+	}
 
-function GridUniqueArt() {
-	return (
-		<section>
-			<FlexContainer align='end' style={{ marginBottom: '60px' }}>
-				<StyledTitle>
-					<GreenText>Amazing</GreenText> and Super <br /> Unique Art of This{' '}
-					<GreenText>Week</GreenText>
-				</StyledTitle>
-				<Button title='See All' />
-			</FlexContainer>
-			<FlexContainer gapColum='20px' gapRow='26px' wrap='wrap' justify='center'>
-				{cards.map(item => (
-					<Card title={item.title} img={item.img} />
-				))}
-			</FlexContainer>
-		</section>
-	);
-}
+	@media screen and (max-width: 560px) {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			'title'
+			'card'
+			'btn';
 
-const StyledTitle = styled.h2`
-	text-align: start;
-	${font({ Fmax: 48, Fmin: 31, weight: 500 })}
+		Button {
+			justify-self: center;
+		}
+
+		${GridTitle} {
+			text-align: center;
+			justify-self: center;
+		}
+	}
 `;
 
 export default UniqueArt;

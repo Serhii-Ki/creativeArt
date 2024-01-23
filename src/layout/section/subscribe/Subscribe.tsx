@@ -5,11 +5,12 @@ import firstImg from '../../../assets/sibscribe_art1.png';
 import secondImg from '../../../assets/sibscribe_art2.jpg';
 import Button from '../../../components/button/Button';
 import { GreenText } from '../../../components/greenText/GreenText';
+import { font } from '../../../styles/Common';
 
 function Subscribe() {
 	return (
 		<section>
-			<FlexContainer>
+			<StyledFlexContainer>
 				<StyledImgContainer>
 					<FirstImg src={firstImg} />
 					<SecondImg src={secondImg} />
@@ -25,7 +26,7 @@ function Subscribe() {
 					</StyledText>
 					<InputContainer>
 						<StyledInput placeholder='Enter your e-mail' />
-						<Button
+						<StyledButton
 							title='Subscribe'
 							position='absolute'
 							top='4px'
@@ -33,15 +34,32 @@ function Subscribe() {
 						/>
 					</InputContainer>
 				</SubscribeBlock>
-			</FlexContainer>
+			</StyledFlexContainer>
 		</section>
 	);
 }
+
+const StyledFlexContainer = styled(FlexContainer)`
+	@media screen and (max-width: 1200px) {
+		flex-direction: column-reverse;
+		row-gap: 50px;
+	}
+`;
 
 const StyledImgContainer = styled.div`
 	position: relative;
 	width: 630px;
 	height: 458px;
+
+	@media screen and (max-width: 760px) {
+		width: 520px;
+		height: 440px;
+	}
+
+	@media screen and (max-width: 576px) {
+		width: 330px;
+		height: 250px;
+	}
 `;
 
 const FirstImg = styled.img`
@@ -52,6 +70,16 @@ const FirstImg = styled.img`
 	left: 0;
 	top: 0;
 	transform: rotate(-11.188deg);
+
+	@media screen and (max-width: 760px) {
+		max-width: 360px;
+		height: 315px;
+	}
+
+	@media screen and (max-width: 576px) {
+		max-width: 210px;
+		height: 203px;
+	}
 `;
 
 const SecondImg = styled.img`
@@ -61,6 +89,16 @@ const SecondImg = styled.img`
 	position: absolute;
 	right: 0;
 	bottom: 0;
+
+	@media screen and (max-width: 760px) {
+		max-width: 230px;
+		max-height: 320px;
+	}
+
+	@media screen and (max-width: 576px) {
+		max-width: 152px;
+		height: 189px;
+	}
 `;
 
 const SubscribeBlock = styled.div`
@@ -69,12 +107,14 @@ const SubscribeBlock = styled.div`
 	justify-content: center;
 	align-items: flex-start;
 	max-width: 520px;
+
+	@media screen and (max-width: 1200px) {
+		text-align: center;
+	}
 `;
 
 const StyledTitle = styled.h2`
-	font-size: 48px;
-	font-weight: 500;
-	line-height: 120%;
+	${font({ Fmax: 48, Fmin: 31, weight: 500 })}
 `;
 
 const StyledText = styled.p`
@@ -96,6 +136,13 @@ const StyledInput = styled.input`
 	background-color: #131e3a;
 	color: rgba(255, 255, 253, 0.72);
 	border-radius: 8px;
+`;
+
+const StyledButton = styled(Button)`
+	@media screen and (max-width: 576px) {
+		position: relative;
+		margin-top: 20px;
+	}
 `;
 
 export default Subscribe;
