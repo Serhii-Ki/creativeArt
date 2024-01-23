@@ -42,6 +42,10 @@ const StyledCard = styled.div`
 	border-radius: 28px;
 	border-top: 1px solid#D3F85A;
 	background: #131e3a;
+
+	@media screen and (max-width: 560px) {
+		width: 343px;
+	}
 `;
 
 const StyledImg = styled.img`
@@ -50,6 +54,12 @@ const StyledImg = styled.img`
 	width: 370px;
 	height: 340px;
 	border-radius: 16px;
+	object-fit: cover;
+
+	@media screen and (max-width: 560px) {
+		width: 311px;
+		height: 340px;
+	}
 `;
 
 const StyledTitle = styled.h3`

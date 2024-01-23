@@ -23,7 +23,7 @@ const forthMenuItems = {
 
 function FooterTop() {
 	return (
-		<FlexContainer>
+		<StyledFlexContainer>
 			<LeftSide>
 				<Logo />
 				<Text>
@@ -32,7 +32,7 @@ function FooterTop() {
 				</Text>
 				<SocialMenu />
 			</LeftSide>
-			<FlexContainer gapColum='90px' align='flex-start'>
+			<MenuFlexContainer gapColum='90px' align='flex-start'>
 				<FooterMenu
 					title={firstMenuItems.title}
 					listItems={firstMenuItems.listItems}
@@ -49,14 +49,40 @@ function FooterTop() {
 					title={forthMenuItems.title}
 					listItems={forthMenuItems.listItems}
 				/>
-			</FlexContainer>
-		</FlexContainer>
+			</MenuFlexContainer>
+		</StyledFlexContainer>
 	);
 }
+
+const StyledFlexContainer = styled(FlexContainer)`
+	@media screen and (max-width: 1100px) {
+		flex-direction: column;
+	}
+`;
 
 const LeftSide = styled.div`
 	display: flex;
 	flex-direction: column;
+
+	@media screen and (max-width: 1100px) {
+		width: 100%;
+		flex-direction: row;
+		justify-content: space-around;
+		margin-bottom: 30px;
+	}
+
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+		align-items: center;
+		gap: 15px;
+	}
+`;
+
+const MenuFlexContainer = styled(FlexContainer)`
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+		gap: 40px;
+	}
 `;
 
 const Text = styled.p`

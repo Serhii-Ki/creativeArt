@@ -9,6 +9,7 @@ import popular2 from '../../../assets/popular_art2.jpg';
 import popular3 from '../../../assets/popular_art3.jpg';
 import popular4 from '../../../assets/popular_art4.jpg';
 import popular5 from '../../../assets/popular_art5.jpg';
+import { font } from '../../../styles/Common';
 import InfoPicture from './InfoPicture/InfoPicture';
 import { PicturePopular } from './PicturesPopular/PicturePopular';
 
@@ -69,12 +70,14 @@ function PopularArtist() {
 
 const StyledSection = styled.section`
 	padding: 180px 0;
+
+	@media screen and (max-width: 768px) {
+		padding: 80px 0;
+	}
 `;
 
 const SectionTitle = styled.h2`
-	font-size: 48px;
-	font-weight: 500;
-	line-height: 120%;
+	${font({ Fmax: 48, Fmin: 31, weight: 500 })}
 `;
 
 const GridContainer = styled.div`
@@ -85,6 +88,16 @@ const GridContainer = styled.div`
 		'first first first second second second second second third third third third'
 		'forth forth forth forth fifth fifth fifth fifth third third third third';
 	grid-template-rows: repeat(2, 300px);
+
+	@media screen and (max-width: 768px) {
+		grid-template-areas:
+			'first'
+			'second'
+			'third'
+			'forth'
+			'fifth';
+		grid-template-rows: repeat(5, minmax(356px, 400px));
+	}
 `;
 
 export default PopularArtist;

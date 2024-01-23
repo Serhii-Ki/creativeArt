@@ -5,16 +5,28 @@ function FooterBottom() {
 	const currentYear = new Date().getFullYear();
 
 	return (
-		<FlexContainer>
-			<Copyright>© Copyright {currentYear} - Creativeart</Copyright>
-			<FlexContainer gapColum='25px'>
+		<StyledFlexContainer>
+			<p>© Copyright {currentYear} - Creativeart</p>
+			<StyledLinkContainer gapColum='25px'>
 				<a href='#/'>Privacy Policy</a>
 				<a href='#/'>Terms & Conditions</a>
-			</FlexContainer>
-		</FlexContainer>
+			</StyledLinkContainer>
+		</StyledFlexContainer>
 	);
 }
 
-const Copyright = styled.p``;
+const StyledFlexContainer = styled(FlexContainer)`
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+		gap: 15px;
+	}
+`;
+
+const StyledLinkContainer = styled(FlexContainer)`
+	@media screen and (max-width: 400px) {
+		flex-direction: column;
+		gap: 8px;
+	}
+`;
 
 export default FooterBottom;

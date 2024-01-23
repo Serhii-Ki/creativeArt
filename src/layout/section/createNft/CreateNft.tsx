@@ -5,15 +5,15 @@ import { GreenText } from '../../../components/greenText/GreenText';
 
 import firstImg from '../../../assets/create_art1.jpg';
 import secondImg from '../../../assets/create_art2.jpg';
+import { font } from '../../../styles/Common';
 
 function CreateNft() {
 	return (
 		<section style={{ padding: '90px 0' }}>
-			<FlexContainer wrap='wrap'>
-				<FlexContainer direction='column' justify='center' align='start'>
+			<StyledFlexWrap wrap='wrap'>
+				<StyledFlexWrap direction='column' justify='center' align='start'>
 					<StyledTitle>
-						Create And Sell <br />
-						Your <GreenText>Best NFTs</GreenText>
+						Create And Sell <br /> Your <GreenText>Best NFTs</GreenText>
 					</StyledTitle>
 					<StyledText>
 						Start exploring the world of digital art and NFTs today and take
@@ -21,22 +21,25 @@ function CreateNft() {
 					</StyledText>
 					<FlexContainer justify='start' style={{ marginBottom: '70px' }}>
 						<Button title='Create Now' />
-						<Button title='Learn More' bgColor='transparent' color='#D3F85A' />
+						<Button
+							title='Learn More'
+							bgColor='transparent'
+							color='#D3F85A'
+							padding='12px 0 12px 36px'
+						/>
 					</FlexContainer>
-				</FlexContainer>
+				</StyledFlexWrap>
 				<StyledImgContainer>
 					<StyledImgFirst src={firstImg} />
 					<StyledImgSecond src={secondImg} />
 				</StyledImgContainer>
-			</FlexContainer>
+			</StyledFlexWrap>
 		</section>
 	);
 }
 
 const StyledTitle = styled.h2`
-	font-size: 48px;
-	font-weight: 500;
-	line-height: 120%;
+	${font({ Fmax: 48, Fmin: 31, weight: 500 })}
 `;
 
 const StyledText = styled.p`
@@ -46,10 +49,21 @@ const StyledText = styled.p`
 	max-width: 425px;
 `;
 
+const StyledFlexWrap = styled(FlexContainer)`
+	@media screen and (max-width: 1200px) {
+		flex-direction: column;
+		align-items: center;
+	}
+`;
+
 const StyledImgContainer = styled.div`
 	position: relative;
 	width: 740px;
 	height: 559px;
+	@media screen and (max-width: 775px) {
+		width: 343px;
+		height: 260px;
+	}
 `;
 
 const StyledImgFirst = styled.img`
@@ -59,6 +73,12 @@ const StyledImgFirst = styled.img`
 	max-width: 410px;
 	max-height: 400px;
 	border-radius: 24px;
+
+	@media screen and (max-width: 775px) {
+		width: 190px;
+		height: 220px;
+		border-radius: 16px;
+	}
 `;
 
 const StyledImgSecond = styled.img`
@@ -68,6 +88,12 @@ const StyledImgSecond = styled.img`
 	max-width: 410px;
 	max-height: 475px;
 	border-radius: 24px;
+
+	@media screen and (max-width: 775px) {
+		width: 190px;
+		height: 186px;
+		border-radius: 16px;
+	}
 `;
 
 export default CreateNft;
