@@ -1,5 +1,5 @@
 function Test() {
-	return <div>Some text</div>;
+	return <div>Change text</div>;
 }
 
 export default Test;
